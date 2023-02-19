@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * jump to other page
-     * @param btn
-     * @param activity
+     * @param btn: button
+     * @param activity: activity
      */
     private void jump(Button btn, Class<?> activity){
         btn.setOnClickListener(v -> {
