@@ -1,18 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+    <!--title-->
+    <RelativeLayout
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#216DBF"
+        android:layout_marginBottom="16dp" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/tvDate"
+            android:layout_toEndOf="@id/tvTime"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <!--list to do-->
+    <ListView
+        android:id="@+id/list_main"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginHorizontal="11dp"
+        android:divider="#00000000"
+        android:dividerHeight="11dp" />
+<!--    buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_cal"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/ic_twotone_calendar_month_24"
+                android:backgroundTint="#446E9A"/>
+
+            <Button
+                android:id="@+id/btn_today"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_toEndOf="@id/btn_cal"
+                android:background="@drawable/ic_twotone_today_24"
+                android:backgroundTint="#446E9A"/>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="25dp"
+                android:layout_toEndOf="@id/btn_today"
+                android:background="@drawable/ic_round_add_circle_outline_24"
+                android:backgroundTint="#446E9A"/>
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toEndOf="@id/btn_add"
+                android:background="@drawable/ic_round_search_24"
+                android:backgroundTint="#446E9A"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_down"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/ic_round_file_download_24"
+                android:backgroundTint="#446E9A"/>
+
+            <Button
+                android:id="@+id/btn_all"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_toEndOf="@id/btn_down"
+                android:background="@drawable/ic_round_list_24"
+                android:backgroundTint="#446E9A"/>
+
+            <Button
+                android:id="@+id/btn_event"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="25dp"
+                android:layout_toEndOf="@id/btn_all"
+                android:background="@drawable/ic_twotone_event_note_24"
+                android:backgroundTint="#446E9A"/>
+
+            <Button
+                android:id="@+id/btn_completed"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toEndOf="@id/btn_event"
+                android:background="@drawable/ic_round_checklist_24"
+                android:backgroundTint="#446E9A"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
