@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">MyApp</string>
     <string name="to_do">TO DO</string>
+    <string name="add">New</string>
+    <string name="calendar">Calender</string>
+    <string name="clear">clear</string>
+    <string name="save">save</string>
+    <string name="name">NAME</string>
+    <string name="start_time">START</string>
+    <string name="alarm_time">ALARM</string>
+    <string name="end_time">END</string>
+    <string name="repeat">REPEAT</string>
+    <string name="note">NOTE</string>
+    <string name="to_do2">TO DO</string>
+    <string name="habit">HABIT</string>
+    <string name="event">EVENT</string>
 </resources>
